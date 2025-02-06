@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #151515;
+    font-family: "Outfit", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.header {
+    background: url(Polyphia.gif) no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-size: 40px;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8), 0 0 20px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.8);
+}
+.nav {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: left;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease-in-out;
+}
+.nav a:hover {
+    color: rgb(154, 240, 255);
+}
+.nav a:hover ~ .header::before {
+    opacity: 1;
+}
+.container {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.sidebar, .content {
+    padding: 20px;
+    background: #333;
+    margin: 10px;
+}
+.sidebar {
+    flex: 1;
+    min-width: 250px;
+}
+.content {
+    flex: 2;
+}
+.image-placeholder {
+    background: url(lopit.png) no-repeat center center;
+    background-size: cover;
+    height: 300px;
+    margin-top: 10px;
+}
+.image-placeholderr {
+    background: url(image.png) no-repeat center center;
+    background-size: cover;
+    height: 300px;
+    margin-top: 10px;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
